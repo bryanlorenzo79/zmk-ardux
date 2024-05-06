@@ -291,6 +291,7 @@
 		combo_q            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_A KEY_T KEY_S>; bindings = <&kp Q>; };
 		combo_x            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_R KEY_T KEY_S>; bindings = <&kp X>; };
 		combo_l            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_E KEY_Y KEY_I>; bindings = <&kp L>; };
+		combo_z            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_S KEY_R KEY_A>; bindings = <&kp L>; };
 		combo_single_quote { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_I KEY_Y KEY_A>; bindings = <&kp SQT>; };
 		combo_semi { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_T KEY_R KEY_E>; bindings = <&kp SEMI>; };
 		
@@ -300,7 +301,7 @@
 		combo_space         { timeout-ms = <TIMEOUT_COMBO_4>; 
                           key-positions = <KEY_E KEY_Y KEY_I KEY_O>; 
                           bindings = <&kp SPACE>; };
-    combo_z             { timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_A KEY_R KEY_T KEY_S>; bindings = <&kp Z>; };
+    /* combo_z             { timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_A KEY_R KEY_T KEY_S>; bindings = <&kp Z>; }; */
 
 		combo_layer_bt_select { timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_A KEY_E KEY_S KEY_O>; bindings = <&tog LAYER_ID_BT_SEL>; };
 		combo_bt_clr          { timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_R KEY_Y KEY_T KEY_I>; bindings = <&bt BT_CLR>; };
@@ -507,9 +508,9 @@
 			label = "Number";
 			bindings = <
 				LEADING_NONES
-				&mo LAYER_ID_NUMBERS                        &kp N7    &kp N8    &kp N9
+				&mo LAYER_ID_NUMBERS                        &none     &kp UP    &none
 				MIDDLE_NONES
-				&none                                       &kp N0    &kp MINUS    &kp PLUS
+				&none                                       &kp LEFT    &kp DOWN    &kp RIGHT
 				TRAILING_NONES
 			>;
 		};
@@ -517,9 +518,9 @@
 			label = "Symbol";
 			bindings = <
 				LEADING_NONES
-				&none                                    &kp UP  &none &none 
+				&sk LSHFT                                   &kt LSHFT   &none &none 
 				MIDDLE_NONES
-				&kp LEFT                                   &kp DOWN &kp RIGHT &mo LAYER_ID_SYMBOLS
+				&kp LCTRL                               &kp LALT &none &mo LAYER_ID_SYMBOLS
 				TRAILING_NONES
 			>;
 		};
@@ -527,9 +528,9 @@
 			label = "Paren";
 			bindings = <
 				LEADING_NONES
-				&kp LCTRL                                    &kp RALT  &sk LSHIFT  &mo LAYER_ID_PARENTHETICALS
+				&none &none &none   &mo LAYER_ID_PARENTHETICALS
 				MIDDLE_NONES
-				&kp DEL                                    &kt LSHIFT  &none  &none
+				&none &none &none  &none
 				TRAILING_NONES
 			>;
 		};
